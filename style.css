@@ -1,4 +1,4 @@
-.rain{
+.container{
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,1);
@@ -6,4 +6,17 @@
   top: 0;
   left: 0;
   color: green;
+}
+
+.rain {
+  animation: drop 1.0s linear infinite;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
 }
