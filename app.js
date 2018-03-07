@@ -1,15 +1,11 @@
 window.addEventListener('DOMContentLoaded', () => {
   const rain = document.querySelector('.rain');
 
-  function showRain(){
-    return String.fromCharCode(0x30A0 + Math.round(Math.random()*96));
-  }
-
   function stream(length){
     const streamLength = Math.floor(Math.random()*length);
     let stream ='';
     for (let i = 0; i < streamLength; i++) {
-      stream += showRain();
+      stream += String.fromCharCode(0x30A0 + Math.round(Math.random()*96));
     }
     return stream;
   }
@@ -24,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const rainy = new RainDrop(10);
+  const rainy = new RainDrop(50);
   rainy.drop();
 
 });
