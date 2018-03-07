@@ -9,7 +9,9 @@
 }
 
 .rain {
-  animation: drop 1.0s linear;
+  animation: drop 1.0s linear forwards;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }
 
 @keyframes drop {
