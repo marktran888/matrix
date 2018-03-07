@@ -14,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
     return stream;
   }
 
+  rain.style.left = `${Math.floor(Math.random()*window.innerWidth)}px`;
   rain.innerHTML = stream();
 
 });

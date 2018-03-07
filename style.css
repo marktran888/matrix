@@ -12,6 +12,7 @@
   animation: drop 1.0s linear forwards;
   writing-mode: vertical-rl;
   text-orientation: upright;
+  position: relative;
 }
 
 @keyframes drop {
