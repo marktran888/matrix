@@ -5,8 +5,8 @@ window.addEventListener('DOMContentLoaded', () => {
     return String.fromCharCode(0x30A0 + Math.round(Math.random()*96));
   }
 
-  function stream(){
-    const streamLength = Math.floor(Math.random()*20);
+  function stream(length){
+    const streamLength = Math.floor(Math.random()*length);
     let stream ='';
     for (let i = 0; i < streamLength; i++) {
       stream += showRain();
@@ -14,7 +14,17 @@ window.addEventListener('DOMContentLoaded', () => {
     return stream;
   }
 
-  rain.style.left = `${Math.floor(Math.random()*window.innerWidth)}px`;
-  rain.innerHTML = stream();
+  class RainDrop {
+    constructor(length) {
+      this.length = length;
+    }
+    drop() {
+      rain.style.left = `${Math.floor(Math.random()*window.innerWidth)}px`;
+      rain.innerHTML = stream(this.length);
+    }
+  }
+
+  const rainy = new RainDrop(10);
+  rainy.drop();
 
 });
