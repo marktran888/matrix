@@ -9,7 +9,7 @@
 }
 
 .rain {
-  animation: drop 1.0s linear infinite;
+  animation: drop 1.0s linear;
 }
 
 @keyframes drop {
